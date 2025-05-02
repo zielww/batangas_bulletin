@@ -17,10 +17,7 @@ return new class extends Migration
             $table->text('content');
             $table->string('image_url');
             // $table->foreignIdFor(App\Models\Category::class);
-            $table->foreignId('user_id')
-                ->constrained('users')
-                ->cascadeOnDelete()
-                ->where('role', 'admin');
+            $table->foreignId('user_id')->constrained('users')->cascadeOnDelete();
             $table->timestamps();
         });
     }

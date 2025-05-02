@@ -22,7 +22,7 @@ class PostFactory extends Factory
             'content' => fake()->paragraph(),
             'image_url' => fake()->sentence(),
             // 'category_id' => Category::factory(),
-            'admin_id' => User::factory()->admin(),
+            'user_id' => User::factory()->admin(),
         ];
     }
 }
